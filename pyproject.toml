@@ -1,0 +1,9 @@
+[project]
+name = "taxi-data-analytics-eng"
+version = "0.1.0"
+description = "A dbt powered project on analytics engineering of newyork taxi data, leveraging postgresdb as the data warehouse."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-postgres>=1.9.0",
+]

@@ -1,0 +1,23 @@
+# create a dbt profile for local postgres
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: dbt_user
+      pass: dbt_password
+      dbname: taxi_data
+      schema: dbt_taxi_data
+      threads: 4
+      keepalives_idle: 0
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: dbt_user
+      pass: dbt_password
+      dbname: dbt_database
+      schema: dbt_taxi_data

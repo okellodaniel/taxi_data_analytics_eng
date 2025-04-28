@@ -1,0 +1,31 @@
+[0m22:07:56.829354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FEE95A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FC830AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FECDE6F0>]}
+
+
+============================== 22:07:56.957171 | 3585aecb-3e13-4304-a790-345f50bc7172 ==============================
+[0m22:07:56.957171 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:07:56.958172 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\Daniel\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m22:07:57.336738 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/Daniel/.dbt')}
+[0m22:07:57.337737 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m22:08:29.042088 [debug] [MainThread]: Starter project path: D:\Machine Learning\taxi_data_analytics_eng\.venv\Lib\site-packages\dbt\include\starter_project
+[0m22:08:29.067797 [info ] [MainThread]: 
+Your new dbt project "taxi_data_ny" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:08:29.068795 [info ] [MainThread]: Setting up your profile.
+[0m22:10:07.226203 [info ] [MainThread]: Profile taxi_data_ny written to C:\Users\Daniel\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:10:07.227551 [debug] [MainThread]: Command `dbt init` succeeded at 22:10:07.227551 after 130.56 seconds
+[0m22:10:07.228566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FE54D340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FE54D910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C7FCE9B5F0>]}
+[0m22:10:07.228566 [debug] [MainThread]: Flushing usage events
+[0m22:10:08.241076 [debug] [MainThread]: An error was encountered while trying to flush usage events
