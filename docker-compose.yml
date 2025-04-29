@@ -27,5 +27,7 @@ volumes:
 
 # Add network
 networks:
+  taxi_network:
+    driver: bridge
   default:
     name: taxi_network
