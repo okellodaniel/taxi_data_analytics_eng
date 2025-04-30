@@ -1,0 +1,45 @@
+docker run -it `
+-e POSTGRES_USER=root `
+-e POSTGRES_PASSWORD=root `
+-e POSTGRES_DB=yellow_taxi `
+-p 5432:5432 `
+-v C:/Users/hands/Documents/projects/docker_revisit/yellow_taxi_db:/var/lib/postgresql/data `
+--name yellow_taxi_db `
+--network pgadmin-net `
+postgres:13
+
+
+
+docker run -p 8085:80 `
+    -e 'PGADMIN_DEFAULT_EMAIL=admin@admin.com' `
+    -e 'PGADMIN_DEFAULT_PASSWORD=root' `
+    --name pgadmin4 `
+    --network pgadmin-net `
+    -d dpage/pgadmin4'
+
+docker network create pgadmin-net
+
+
+python ingest.py `
+--user root `
+--password root `
+--host localhost `
+--port 5432 `
+--db yellow_taxi `
+--table yellow_taxi `
+--url https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet `
+--file yellow_tripdata_2021-01.csv
+
+
+docker run -it `
+    --network pgadmin-net `
+    --name ingest `
+    ingest:latest `
+    --user root `
+    --password root `
+    --host yellow_taxi_db `
+    --port 5432 `
+    --db yellow_taxi `
+    --table yellow_taxi `
+    --url https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet `
+    --file yellow_tripdata_2021-01.csv 

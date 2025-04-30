@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+yellow_taxi_vol/**
+logs/**
+postgres_data/**
